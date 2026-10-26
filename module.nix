@@ -43,6 +43,10 @@ in
     programs.spicetify = {
       enable = true;
 
+      spicetifyPackage = inputs.nixpkgs.legacyPackages.${pkgs.stdenv.hostPlatform.system}.spicetify-cli;
+
+      alwaysEnableDevTools = true;
+
       theme = {
         name = "DefaultDynamic";
         src = themeSrc;
