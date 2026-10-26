@@ -68,6 +68,7 @@ in
           playlistIcons
           copyLyrics
           aiBandBlocker
+          beautifulLyrics
         ])
         ++ [
           {
