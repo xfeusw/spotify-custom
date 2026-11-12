@@ -57,15 +57,6 @@ in
 
       enabledExtensions =
         (with spicePkgs.extensions; [
-          bookmark
-          trashbin
-          songStats
-          fullAlbumDate
-          featureShuffle
-          writeify
-          wikify
-          playlistIntersection
-          playlistIcons
           copyLyrics
           aiBandBlocker
           beautifulLyrics
@@ -80,22 +71,14 @@ in
             src = vibrantExtension;
           }
 
-          (ext "${inputs.spicetify-ohitstom}/immersiveView" "immersiveView.js")
           (ext "${inputs.spicetify-ohitstom}/npvAmbience" "npvAmbience.js")
           (ext "${inputs.spicetify-konsl}/find-duplicates/dist" "find-duplicates.js")
           (ext "${inputs.spicetify-konsl}/playback-bar-waveform/dist" "playback-bar-waveform.js")
-          (ext "${inputs.spicetify-dj-info}/dist" "djinfo.mjs")
-          (ext "${inputs.spicetify-genres}/dist" "whatsThatGenre.js")
           (ext inputs.spicetify-anonymized-radios "AnonymizedRadios.js")
           (ext "${inputs.spicetify-kamiloo}/extensions/more-lyrics/dist" "more-lyrics.js")
-          (ext inputs.spicetify-lyric-miniplayer "lyrics-overlay.js")
         ];
 
       enabledCustomApps = (with spicePkgs.apps; [ marketplace ]) ++ [
-        {
-          name = "listening-stats";
-          src = inputs.spicetify-listening-stats;
-        }
         {
           name = "better-local-files";
           src = inputs.spicetify-better-local-files;
