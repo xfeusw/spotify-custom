@@ -85,7 +85,7 @@ in
         }
       ];
 
-      enabledSnippets = import ./snippets.nix;
+      # enabledSnippets = import ./snippets.nix;
     };
   };
 }
